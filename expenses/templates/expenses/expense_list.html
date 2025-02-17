@@ -7,6 +7,14 @@
   <body>
     <h1>Expense Tracker</h1>
     <h2>Total: ${{ total_expense }}</h2>
+
+    <h3>Add an expense</h3>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Add Expense</button>
+    </form>
+
     <table>
       <tr>
         <th>Date</th>
